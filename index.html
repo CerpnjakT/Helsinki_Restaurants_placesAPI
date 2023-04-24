@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>USP Map Demo</title>
+    <link rel="stylesheet" href="style.css">
+    
+    
+    
+</head>
+
+<body>
+  
+    
+    <div id="side-panel">
+        <h2 id="pageTitle">Helsinki Restaurant Finder 2000</h2>
+    <div id="inputs">
+        <label class="inputItem" for="searchKeyword">Search Keyword</label><input id="searchKeyword" type="text" value="restaurant"><br>
+        <label class="inputItem" for="searchRadius">Search Radius [m]</label><input id="searchRadius" type="number" min="1" max="1000" value="300">
+        <button class="button" id="search" >Search</button>
+        <button class="button" id="more">Load More</button>
+        
+    </div>
+    <p>Number of Hits: <strong></strong><span id="hits"></span></strong></p>
+    <div id="places"></div>
+    <button class="button" id="clear" onclick="clearList()">Clear List</button>
+    <button class="button" id="download" onclick="requestDetails()">Download</button>
+</div>
+    <!--The div element for the map -->
+    <div id="map"></div>
+
+    
+  
+
+</body>
+
+ <script async
+ src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCbPZFIYYixnrZQCKwtHYbiuBlhdJIeT_k&libraries=places&callback=initMap">
+</script>
+<script src="nearbySearch.js"></script>
+
+</html>
